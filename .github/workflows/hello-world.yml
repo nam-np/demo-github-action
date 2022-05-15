@@ -1,7 +1,7 @@
 name: hello-world
 on: push
 jobs:
-  my-job:
+  setup-env:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
@@ -19,6 +19,7 @@ jobs:
            echo "env: ${{ matrix.s3 }}"
   build:
      runs-on: ubuntu-20.04
+     needs: setup-env
      steps:
       - name: Show s3 name
         run: |
