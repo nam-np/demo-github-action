@@ -5,8 +5,15 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        env: [stg, prod]
+        include:
+          - env: stg
+            s3: stg-s3
+          - env: prod
+            s3: prod-s3
     steps:
       - name: Show env
         run: |
            echo "env: ${{ matrix.env }}"
+      - name: Show s3 name
+        run: |
+           echo "env: ${{ matrix.s3 }}"
