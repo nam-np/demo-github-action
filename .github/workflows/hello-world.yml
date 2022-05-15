@@ -17,3 +17,9 @@ jobs:
       - name: Show s3 name
         run: |
            echo "env: ${{ matrix.s3 }}"
+  build:
+     runs-on: ubuntu-20.04
+     steps:
+      - name: Show s3 name
+        run: |
+           echo "build"
