@@ -11,6 +11,9 @@ jobs:
           - env: prod
             s3: prod-s3
     steps:
+      - name: notify
+        run: |
+           echo "start build"
       - name: Show env
         run: |
            echo "env: ${{ matrix.env }}"
