@@ -1,0 +1,10 @@
+name: workflow_dispatch
+on: 
+  workflow_dispatch
+jobs:
+  setup-env:
+    runs-on: ubuntu-20.04
+    steps:
+        - name: notify
+          run: |
+             echo "start build"
