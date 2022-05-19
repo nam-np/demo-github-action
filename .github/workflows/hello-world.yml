@@ -17,6 +17,7 @@ jobs:
       - name: Show env
         run: |
            echo "env: ${{ matrix.env }}"
+           if [ ${{ matrix.env }}=="stg" ]; then echo "111111111111"; fi
       - name: Show s3 name
         run: |
            echo "env: ${{ matrix.s3 }}"
