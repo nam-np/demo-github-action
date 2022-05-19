@@ -7,3 +7,10 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'
+jobs:
+  setup-env:
+    runs-on: ubuntu-20.04
+    steps:
+        - name: notify
+          run: |
+             echo "start build"
