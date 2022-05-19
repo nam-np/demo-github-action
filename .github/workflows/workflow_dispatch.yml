@@ -1,13 +1,6 @@
 name: workflow_dispatch
 on: 
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
 jobs:
   setup-env:
     runs-on: ubuntu-20.04
